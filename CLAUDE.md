@@ -14,9 +14,26 @@ The full specification and workflow details are in `README_CLAUDE.md` (Chinese).
 ```bash
 # Install dependencies (uv)
 uv sync
+
+# Run the tool
+uv run python -m jellyfin_music_replay
 ```
 
 ## Architecture
+
+### Module Structure
+
+```
+jellyfin_music_replay/
+    __init__.py          # __version__
+    __main__.py          # Entry point: python -m jellyfin_music_replay
+    config.py            # Env vars, .device_id, dataclasses
+    parser.py            # ItemName parsing (rightmost () algorithm)
+    database.py          # SQLite reads (raw rows, no aggregation)
+    client.py            # Jellyfin REST API (requests.Session)
+    periods.py           # Period definition, aggregation, playlist name generation
+    main.py              # Pipeline orchestration
+```
 
 ### Data Flow
 
@@ -34,6 +51,8 @@ SQLite DB (PlaybackActivity table)
 - **Rightmost `()` pair is the Album**: ItemName parsing treats the rightmost matched pair of parentheses as the album name, everything after ` - ` and before that album as the track name, and everything before ` - ` as the album artist.
 - **Play duration, not play count**: Ranking is by total `PlayDuration` (seconds), not number of plays.
 - **Username/password auth** (not API key): API key-based auth can't update/delete playlists, so the app authenticates by username/password to obtain an access token.
+- **`database.py` returns raw rows, `periods.py` does aggregation**: Clean separation — DB layer is unaware of period logic, period logic is unaware of DB.
+- **Lookup index by `(Name, Album, AlbumArtist)` tuple**: Built once from all Jellyfin Audio items, then used to resolve each parsed ItemName to its `Id`.
 
 ### API Auth Headers
 
@@ -55,15 +74,18 @@ Optional vars control period enable/disable, title templates, and year formattin
 
 - `.device_id` — random UUID stored in a text file at the project root (generated once, reused for subsequent runs)
 
-### Project Structure (Planned)
+### Project Structure
 
 ```
-samples/                      # Sample API responses for reference
-specification/                # Jellyfin OpenAPI spec
+jellyfin_music_replay/          # Main package
+samples/                        # Sample API responses for reference
+specification/                  # Jellyfin OpenAPI spec
 
-README_CLAUDE.md              # Full specification (read this first)
-.env.example                  # Environment variable template
-pyproject.toml                # Project config (uv)
+README_CLAUDE.md                # Full specification (read this first)
+.env / .env.example             # Environment variables
+pyproject.toml                  # Project config (uv, hatchling build backend)
+.device_id                      # Persistent device UUID (gitignored)
+playback_reporting.db           # SQLite playback database (gitignored)
 ```
 
 ## Key Notes
@@ -72,3 +94,4 @@ pyproject.toml                # Project config (uv)
 - The Jellyfin OpenAPI spec at `specification/jellyfin-openapi-10.10.7.json` is the API reference
 - `samples/` contains real API response samples referenced by the spec
 - User-facing output (playlist names, UI text) must be in English despite the spec being in Chinese
+- Dependencies: `requests` (HTTP client), `python-dotenv` (`.env` loading) — all else is stdlib
