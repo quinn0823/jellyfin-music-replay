@@ -223,8 +223,8 @@ __marimo__/
 jellyfin-openapi-*.json
 
 # Sample files
-/samples/
-/examples/
+# /samples/
+# /examples/
 
 # Playback reporting database
 playback_reporting.db

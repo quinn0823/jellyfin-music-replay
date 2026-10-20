@@ -1,0 +1,35 @@
+{
+    "Items": [
+        {
+            "Name": "唱歌",
+            "ServerId": "95b6814630534e469deb4d12d8f242fc",
+            "Id": "f4b9a857c363136aacffdad7d32c75f3",
+            "ChannelId": null,
+            "RunTimeTicks": 4333510430,
+            "IsFolder": true,
+            "Type": "Playlist",
+            "UserData": {
+                "PlaybackPositionTicks": 0,
+                "PlayCount": 0,
+                "IsFavorite": false,
+                "Played": false,
+                "Key": "f4b9a857-c363-136a-acff-dad7d32c75f3",
+                "ItemId": "00000000000000000000000000000000"
+            },
+            "ChildCount": 2,
+            "ImageTags": {
+                "Primary": "f66f0b88d21cbf7312ca020c8e89c7f5"
+            },
+            "BackdropImageTags": [],
+            "ImageBlurHashes": {
+                "Primary": {
+                    "f66f0b88d21cbf7312ca020c8e89c7f5": "eZHn8JjZfQWVM{$|s:fQxZae$ys:fQxZRQ}?affQV[WC%0ayfQWCs."
+                }
+            },
+            "LocationType": "FileSystem",
+            "MediaType": "Audio"
+        }
+    ],
+    "TotalRecordCount": 1,
+    "StartIndex": 0
+}

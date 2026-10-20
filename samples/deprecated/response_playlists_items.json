@@ -1,0 +1,118 @@
+{
+    "Items": [
+        {
+            "Name": "Glad You Came",
+            "ServerId": "95b6814630534e469deb4d12d8f242fc",
+            "Id": "363562276711b1e780b1ea9f684c6043",
+            "PlaylistItemId": "363562276711b1e780b1ea9f684c6043",
+            "HasLyrics": true,
+            "Container": "flac",
+            "PremiereDate": "2011-11-04T00:00:00.0000000Z",
+            "ChannelId": null,
+            "RunTimeTicks": 1979355330,
+            "ProductionYear": 2011,
+            "IndexNumber": 1,
+            "ParentIndexNumber": 1,
+            "IsFolder": false,
+            "Type": "Audio",
+            "ParentLogoItemId": "bccfbc24c3c85c748813b4e20b36bea7",
+            "ParentBackdropItemId": "bccfbc24c3c85c748813b4e20b36bea7",
+            "ParentBackdropImageTags": ["0ee821b27730f63ef8896515c56a6ea6"],
+            "UserData": {
+                "PlaybackPositionTicks": 0,
+                "PlayCount": 39,
+                "IsFavorite": true,
+                "LastPlayedDate": "2026-05-31T07:19:16.1562159Z",
+                "Played": true,
+                "Key": "The Wanted-Battleground-0001-0001Glad You Came",
+                "ItemId": "00000000000000000000000000000000"
+            },
+            "Artists": ["The Wanted"],
+            "ArtistItems": [
+                {
+                    "Name": "The Wanted",
+                    "Id": "bccfbc24c3c85c748813b4e20b36bea7"
+                }
+            ],
+            "Album": "Battleground",
+            "AlbumId": "e3a2ed9e94e34a06e0f332e7ce4355aa",
+            "AlbumPrimaryImageTag": "f1969be084eba434a8b377cba1b88b0b",
+            "AlbumArtist": "The Wanted",
+            "AlbumArtists": [
+                {
+                    "Name": "The Wanted",
+                    "Id": "bccfbc24c3c85c748813b4e20b36bea7"
+                }
+            ],
+            "ImageTags": {},
+            "BackdropImageTags": [],
+            "ParentLogoImageTag": "c723680a4f41ff27757accfd724aeb13",
+            "ImageBlurHashes": {
+                "Logo": {
+                    "c723680a4f41ff27757accfd724aeb13": "OoQJyFoft7ofs:oft7~WfjRjayWBayRkt7jtj[j[ayj[j["
+                },
+                "Backdrop": {
+                    "0ee821b27730f63ef8896515c56a6ea6": "WYEoiG%LR-xuW=kD~poLRjofR*a#?IWBRjofR*WCkXWBoJofoLoL"
+                },
+                "Primary": {
+                    "f1969be084eba434a8b377cba1b88b0b": "evHdjh%1RkspWB}?xGWBs.ax-mn%ayoeaytQayaya#WCX7R*ayazWC"
+                }
+            },
+            "LocationType": "FileSystem",
+            "MediaType": "Audio"
+        },
+        {
+            "Name": "Stolen",
+            "ServerId": "95b6814630534e469deb4d12d8f242fc",
+            "Id": "2e6968a599fc1c9cba1e490afd6740fc",
+            "PlaylistItemId": "2e6968a599fc1c9cba1e490afd6740fc",
+            "HasLyrics": true,
+            "Container": "mp3",
+            "PremiereDate": "2012-10-22T00:00:00.0000000Z",
+            "ChannelId": null,
+            "RunTimeTicks": 2354155100,
+            "ProductionYear": 2012,
+            "IndexNumber": 9,
+            "ParentIndexNumber": 1,
+            "IsFolder": false,
+            "Type": "Audio",
+            "UserData": {
+                "PlaybackPositionTicks": 0,
+                "PlayCount": 40,
+                "IsFavorite": false,
+                "LastPlayedDate": "2026-05-31T07:15:20.6644113Z",
+                "Played": true,
+                "Key": "Lawson-Chapman Square-0001-0009Stolen",
+                "ItemId": "00000000000000000000000000000000"
+            },
+            "Artists": ["Lawson"],
+            "ArtistItems": [
+                {
+                    "Name": "Lawson",
+                    "Id": "e465c76d251a419f6c693f0ce1d1c4fb"
+                }
+            ],
+            "Album": "Chapman Square",
+            "AlbumId": "58293343081023d767bdc5aa6922658b",
+            "AlbumPrimaryImageTag": "a212aa4e554d163cd7b63aaead115458",
+            "AlbumArtist": "Lawson",
+            "AlbumArtists": [
+                {
+                    "Name": "Lawson",
+                    "Id": "e465c76d251a419f6c693f0ce1d1c4fb"
+                }
+            ],
+            "ImageTags": {},
+            "BackdropImageTags": [],
+            "ImageBlurHashes": {
+                "Primary": {
+                    "a212aa4e554d163cd7b63aaead115458": "eYH^uCM}EL%1xZ~BM|ozxYt7ozNI%1s.bHkXWXRjs.t6MxkCX8oLt7"
+                }
+            },
+            "LocationType": "FileSystem",
+            "MediaType": "Audio"
+        }
+    ],
+    "TotalRecordCount": 2,
+    "StartIndex": 0
+}
